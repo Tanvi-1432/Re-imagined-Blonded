@@ -22,7 +22,7 @@ A simple responsive reimagined single page website of the American singer-songwr
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://tanvi-1432.github.io/Re-imagined-Blonded/](https://tanvi-1432.github.io/Re-imagined-Blonded/)
 
 ## My process
 
