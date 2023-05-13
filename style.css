@@ -1,0 +1,773 @@
+/* css reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* transition animation */
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(40deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+body {
+  /* might wanna changethe height to min-height */
+  height: 100vh;
+  background-color: rgb(216, 212, 210);
+}
+
+/* Title */
+
+.title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 7.5rem;
+  letter-spacing: 1rem;
+  text-shadow: 1px 0 black;
+}
+
+.black-line {
+  display: inline-block;
+  background-color: black;
+  width: 15.4rem;
+  height: 2.5rem;
+  position: relative;
+  bottom: 2.4rem;
+}
+
+.white {
+  display: inline-block;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 4.2rem;
+  position: relative;
+  bottom: 2.4rem;
+  letter-spacing: 0.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 4.5rem;
+    letter-spacing: .5rem;
+  }
+
+  .black-line {
+    width: 8.2rem;
+    height: 1.5rem;
+    bottom: 1.4rem;
+  }
+
+  .white {
+    font-size: 2.5rem;
+    letter-spacing: .4rem;
+    bottom: 1.4rem;
+  }
+}
+
+/* Nav */
+
+.navigation {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.navigation li {
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+}
+
+/* For the backgound-color to ease in when clicked */
+.nav {
+  transition: .3s ease-in-out;
+}
+
+.nav-3 {
+  background-color: black;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 950px) {
+  .navigation {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navigation {
+    font-size: .7rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .navigation li {
+    padding: 0.1rem .7rem;
+  }
+}
+
+/* HOME */
+
+.home {
+  /* display: none; */
+  text-align: center;
+  padding: 9rem 0 4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3rem;
+  animation: transitionIn 0.75s;
+}
+
+.home .song-preview {
+  display: inline-block;
+  color: whitesmoke;
+  background-color: black;
+  padding: 0.1rem 1.89rem;
+  cursor: pointer;
+  position: relative;
+  bottom: 17rem;
+  left: 17.28rem;
+}
+
+/* it's better to make img block element but to many things to change now */
+.home img {
+  width: 600px;
+  margin: auto;
+}
+
+.home a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.1rem 2.32rem;
+  position: relative;
+  bottom: 17rem;
+  right: 16.27rem;
+}
+
+
+@media only screen and (max-width: 1137px) {
+  .home {
+    font-size: 2rem;
+    padding: 4rem 0 4rem;
+  }
+
+  .home img {
+    width: 500px;
+    display: block;
+  }
+
+  .home .song-preview {
+    bottom: -28rem;
+    left: -8.15rem;
+  }
+
+  .home a {
+    bottom: 15.4rem;
+    right: -8.55rem;
+  }
+}
+
+@media only screen and (max-width: 635px) {
+  .home {
+    font-size: 1.5rem;
+    padding: 4rem 0 4rem;
+  }
+
+  .home img {
+    width: 400px;
+  }
+
+  .home .song-preview {
+    padding: 0.1rem 1.5rem;
+    left: -6.8rem;
+    bottom: -22rem;
+  }
+
+  .home a {
+    padding: 0.1rem 2rem;
+    bottom: 12.6rem;
+    right: -6.93rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .home {
+    font-size: 1.1rem;
+  }
+
+  .home img {
+    width: 300px;
+  }
+
+  .home .song-preview {
+    padding: 0.1rem 1.07rem;
+    left: -5.23rem;
+    bottom: -16.4rem;
+  }
+
+  .home a {
+    padding: 0.1rem 1.5rem;
+    bottom: 9.6rem;
+    right: -5.26rem;
+  }
+}
+
+/* ASSISTANT */
+
+.assistant-container {
+  border-radius: 100%;
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.assistant {
+  font-size: 2.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  color: white;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .assistant-container {
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .assistant {
+    font-size: 1.5rem;
+    padding: .2rem .6rem;
+  }
+}
+
+/* CONNECT */
+
+.connect {
+  display: none;
+  text-align: center;
+  max-width: 70rem;
+  width: 80%;
+  margin: 7rem auto;
+  padding: 5rem;
+  animation: transitionIn 0.75s;
+}
+
+.connect input,
+textarea {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+  /* letter-spacing: .5rem; */
+}
+
+#name,
+#subject {
+  background-color: whitesmoke;
+  color: black;
+}
+
+#email,
+#message {
+  background-color: black;
+  color: white;
+}
+
+::placeholder {
+  opacity: 0.9;
+}
+
+#name::placeholder {
+  color: black;
+}
+
+#subject::placeholder {
+  color: black;
+}
+
+#email::placeholder {
+  color: whitesmoke;
+}
+
+#message::placeholder {
+  color: whitesmoke;
+}
+
+#send {
+  width: 4.5rem;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  float: right;
+  right: -1.5rem;
+  bottom: 2.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+  -webkit-appearance: none;
+}
+
+#send:hover {
+  background-color: black;
+  border-color: whitesmoke;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 950px) {
+  .connect {
+    width: 100%;
+    margin: 1.8rem auto;
+  }
+
+  #send {
+    float: none;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .connect {
+    margin: .8rem auto;
+  }
+
+  .connect input,
+  textarea {
+    font-size: 1.5rem;
+    padding: .6rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .connect {
+    padding: 5rem 1rem;
+  }
+}
+
+/* Music */
+
+.music {
+  display: none;
+  text-align: center;
+  width: 1000px;
+  margin: auto;
+  animation: transitionIn 0.75s;
+}
+
+.album-name {
+  font-size: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  position: relative;
+  left: -24rem;
+  top: 8rem;
+  z-index: 2;
+  animation: transitionIn 1.5s;
+}
+
+.album-cover {
+  background-image: url("images/gFTWjmDwnrrgDqxBwUYo_NXv7FoYBc5BrNIaXtyj4FI\ 2.jpg.jpg");
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 800px;
+  height: 800px;
+  padding: 3rem;
+  border: 0.5rem solid whitesmoke;
+  border-radius: 100%;
+  /* outline: 3px solid whitesmoke; */
+  margin: auto;
+  position: relative;
+  top: -1rem;
+  z-index: -1;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 24;
+  background-color: whitesmoke;
+  border: 4rem solid whitesmoke;
+  border-radius: 100%;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  left: -1.6rem;
+  top: -31rem;
+  transition: 0.2s ease-out;
+}
+
+.material-symbols-outlined:active {
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 20;
+}
+
+.track {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4.7rem;
+  width: 5rem;
+  position: relative;
+  float: right;
+  left: 9rem;
+  top: -22rem;
+  animation: transitionIn 1.5s;
+}
+
+.track-smaller-font {
+  letter-spacing: 1.5px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  position: relative;
+  top: -3rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .music {
+    margin-top: 5rem;
+    width: 600px;
+  }
+
+  .album-name {
+    position: static;
+  }
+
+  .album-cover {
+    width: 600px;
+    height: 600px;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .material-symbols-outlined {
+    top: 0;
+    left: -15rem;
+    display: inline-block;
+    border: 3rem solid whitesmoke;
+  }
+
+  .track {
+    left: -9.3rem;
+    top: 8rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .music {
+    width: 350px;
+  }
+
+  .album-name {
+    font-size: 5.5rem;
+  }
+
+  .album-cover {
+    background-size: 250px;
+    width: 350px;
+    height: 450px;
+  }
+
+  .material-symbols-outlined {
+    left: -7rem;
+  }
+
+  .track {
+    left: -1.3rem;
+  }
+}
+
+/* about */
+
+.about-container {
+  display: none;
+  padding-bottom: 20rem;
+  animation: transitionIn 0.75s;
+}
+
+.about {
+  display: flex;
+  max-width: 1150px;
+  margin: 0 auto;
+  position: relative;
+  top: 3rem;
+  left: 2rem;
+  align-content: center;
+}
+
+.about-me {
+  max-width: 340px;
+  display: inline-block;
+  line-height: 2rem;
+  position: relative;
+  top: 8rem;
+  left: -6rem;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 2;
+  animation: transitionIn 0.95s;
+}
+
+.about-me-mobile {
+  display: none;
+}
+
+.about-image {
+  display: flex;
+}
+
+.image-ring {
+  border: 0.5rem solid whitesmoke;
+  width: 600px;
+  height: 600px;
+  border-radius: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 6rem;
+  left: 15rem;
+  z-index: 1;
+  animation: transitionIn 1s;
+}
+
+.about img {
+  /* display: block; */
+  width: 400px;
+  margin: auto;
+  position: relative;
+  top: 10rem;
+}
+
+.quote {
+  background-color: rgb(216, 212, 210);
+  max-width: 450px;
+  height: 130px;
+  word-spacing: .3rem;
+  line-height: 2rem;
+  float: right;
+  position: relative;
+  top: 13rem;
+  left: -4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.quote-bold {
+  font-size: 1.5rem;
+}
+
+.quote-name {
+  font-size: 1.5rem;
+}
+
+.quote-name-white {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 1400px) {
+  .about {
+    max-width: 950px;
+    top: 1rem;
+  }
+
+  .about img {
+    width: 300px;
+    top: 4rem;
+  }
+
+  .image-ring {
+    width: 450px;
+    height: 450px;
+    left: 14rem;
+  }
+
+  .about-me {
+    max-width: 300px;
+    line-height: 1.8rem;
+  }
+
+  .quote {
+    width: 350px;
+    font-size: .9rem;
+    top: 10rem;
+    left: -2rem;
+  }
+
+  .quote-bold {
+    font-size: 1.3rem;
+  }
+
+  .quote-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .about-me {
+    display: none;
+    width: 0;
+  }
+  
+  .about-me-mobile {
+    display: block;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding: 0 1.3rem;
+    position: relative;
+    top: 13rem;
+  }
+
+  .image-ring {
+    left: 0rem;
+  }
+
+  .about img {
+    top: 8rem;
+    right: 2rem;
+  }
+
+  .quote {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-mobile {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .about {
+    max-width: 360px;
+    left: 0rem;
+    top: 0rem;
+  }
+
+  .image-ring {
+    width: 320px;
+    height: 320px;
+    left: 1.2rem;
+  }
+
+  .about img {
+    width: 230px;
+    top: 6.5rem;
+    right: .6rem;
+  }
+  
+  .about-me-mobile {
+    top: 11rem;
+  }
+}
+
+/* Merch */
+
+.merch-container {
+  display: none;
+  min-height: 700px;
+  /* -webkit-appearance: none; */
+  animation: transitionIn 0.75s;
+}
+
+.merch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 6rem 0 10rem 0;
+}
+
+.merch img {
+  width: 350px;
+  height: 350px;
+  border: .3rem solid white;
+  border-radius: 100%;
+  margin: 3rem;
+  object-fit: cover;
+}
+
+.merch a {
+  text-decoration: none;
+}
+
+.merch button {
+  display: block;
+  margin: auto;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-color: black;
+  color: whitesmoke;
+  padding: .3rem 2rem;
+  cursor: pointer;
+  animation: transitionIn 1.5s;
+}
+
+@media only screen and (max-width: 1336px) {
+  .merch-container {
+    min-height: 1000px;
+  }
+}
+
+@media only screen and (max-width: 892px) and (min-width: 693px) {
+  .merch img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .merch-container {
+    min-height: 900px;
+  }
+}
+
+@media only screen and (max-width: 692px) {
+  .merch {
+    margin-top: 3rem;
+  }
+
+  .merch img {
+    width: 300px;
+    height: 300px;
+    margin: 3rem 2rem;
+  }
+
+  .merch-container {
+    min-height: 1400px;
+  }
+}
