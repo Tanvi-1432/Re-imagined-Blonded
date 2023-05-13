@@ -137,7 +137,7 @@ function musicReset() {
 let playPauseButton = document.querySelector(".material-symbols-outlined");
 // audio constructor
 let nikeAudio = new Audio(
-    "/audio/Y2Mate.is - Frank Ocean - Nikes-diIFhc_Kzng-160k-1654150320008.9.m4a"
+    "audio/Y2Mate.is - Frank Ocean - Nikes-diIFhc_Kzng-160k-1654150320008.9.m4a"
 );
 
 // event listener to play or pause the audio when clicked on the play or pause icon and alternate between the play/pause icons
